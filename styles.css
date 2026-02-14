@@ -307,8 +307,8 @@ body {
 }
 
 .cyber-cube {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     position: relative;
     transform-style: preserve-3d;
     animation: rotateCube 10s infinite linear;
@@ -316,41 +316,41 @@ body {
 
 .cube-face {
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     background: rgba(5, 5, 5, 0.8);
     border: 3px solid var(--accent-pink);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: var(--accent-pink);
     font-weight: bold;
-    box-shadow: 0 0 45px rgba(255, 0, 153, 0.4);
+    box-shadow: 0 0 40px rgba(255, 0, 153, 0.4);
 }
 
 .front {
-    transform: rotateY(0deg) translateZ(225px);
+    transform: rotateY(0deg) translateZ(175px);
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(225px);
+    transform: rotateY(180deg) translateZ(175px);
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(225px);
+    transform: rotateY(90deg) translateZ(175px);
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(225px);
+    transform: rotateY(-90deg) translateZ(175px);
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(225px);
+    transform: rotateX(90deg) translateZ(175px);
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(225px);
+    transform: rotateX(-90deg) translateZ(175px);
 }
 
 
