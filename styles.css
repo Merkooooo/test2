@@ -316,41 +316,41 @@ body {
 
 .cube-face {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     background: rgba(5, 5, 5, 0.8);
     border: 3px solid var(--accent-pink);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--accent-pink);
     font-weight: bold;
-    box-shadow: 0 0 50px rgba(255, 0, 153, 0.4);
+    box-shadow: 0 0 45px rgba(255, 0, 153, 0.4);
 }
 
 .front {
-    transform: rotateY(0deg) translateZ(300px);
+    transform: rotateY(0deg) translateZ(225px);
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(300px);
+    transform: rotateY(180deg) translateZ(225px);
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(300px);
+    transform: rotateY(90deg) translateZ(225px);
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(300px);
+    transform: rotateY(-90deg) translateZ(225px);
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(300px);
+    transform: rotateX(90deg) translateZ(225px);
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(300px);
+    transform: rotateX(-90deg) translateZ(225px);
 }
 
 
