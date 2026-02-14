@@ -69,6 +69,30 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // --- Scroll Spy (Sidebar Active State) ---
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let current = entry.target.getAttribute('id');
+                navItems.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of section is visible
+    });
+
+    sections.forEach(section => {
+        scrollObserver.observe(section);
+    });
+
 });
 
 // --- Glitch Text Effect (Random characters on hover) ---
