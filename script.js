@@ -1,34 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Custom Cursor ---
-    const cursorDot = document.getElementById('cursor-dot');
-    const cursorCircle = document.getElementById('cursor-circle');
-
-    document.addEventListener('mousemove', (e) => {
-        // Dot follows instantly
-        cursorDot.style.left = e.clientX + 'px';
-        cursorDot.style.top = e.clientY + 'px';
-
-        // Circle follows with slight delay
-        cursorCircle.animate({
-            left: e.clientX + 'px',
-            top: e.clientY + 'px'
-        }, { duration: 500, fill: "forwards" });
-    });
-
-    // Hover effects for cursor
-    const links = document.querySelectorAll('a, button, .status-bar-item, .bento-card, .project-row');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            cursorCircle.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursorCircle.style.borderColor = 'var(--accent-pink)';
-        });
-        link.addEventListener('mouseleave', () => {
-            cursorCircle.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorCircle.style.borderColor = 'var(--accent-green)';
-        });
-    });
-
     // --- Smooth Scroll for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

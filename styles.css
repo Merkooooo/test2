@@ -17,8 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
-    /* Custom cursor everywhere */
+    /* Custom cursor removed */
 }
 
 body {
@@ -28,33 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ----- CUSTOM CURSOR ----- */
-.cursor-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--accent-green);
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-}
-
-.cursor-circle {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--accent-green);
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    z-index: 9998;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
-}
+/* ----- CUSTOM CURSOR REMOVED ----- */
 
 /* ----- BACKGROUND FX ----- */
 .grid-overlay {
