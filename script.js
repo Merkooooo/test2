@@ -79,14 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 let current = entry.target.getAttribute('id');
                 navItems.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
+                    if (link.getAttribute('href') === '#' + current) {
                         link.classList.add('active');
                     }
                 });
             }
         });
     }, {
-        threshold: 0.5 // Trigger when 50% of section is visible
+        threshold: 0.3,
+        rootMargin: '-20% 0px -60% 0px'
     });
 
     sections.forEach(section => {
