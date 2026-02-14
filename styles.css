@@ -307,8 +307,8 @@ body {
 }
 
 .cyber-cube {
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     position: relative;
     transform-style: preserve-3d;
     animation: rotateCube 10s infinite linear;
