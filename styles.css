@@ -221,15 +221,25 @@ body {
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 30px;
+    margin-top: 10px;
 }
 
-.hero-title .highlight {
+.hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.highlight {
     color: transparent;
     -webkit-text-stroke: 2px var(--text-white);
     position: relative;
+    display: inline-block;
 }
 
-.hero-title .highlight::before {
+.highlight::before {
     content: 'INŽENIRING';
     position: absolute;
     top: 0;
