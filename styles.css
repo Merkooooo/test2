@@ -304,7 +304,7 @@ body {
 /* 3D CUBE ANIMATION */
 .hero-graphic {
     perspective: 1500px;
-    margin-left: calc(-6cm - 500px);
+    margin-left: calc(-6cm - 800px);
 }
 
 .cyber-cube {
