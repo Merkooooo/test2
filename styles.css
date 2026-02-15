@@ -307,8 +307,8 @@ body {
 }
 
 .cyber-cube {
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
     position: relative;
     transform-style: preserve-3d;
     animation: rotateCube 10s infinite linear;
@@ -316,43 +316,43 @@ body {
 
 .cube-face {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(255, 128, 0, 0.9);
-    /* BRIGHT ORANGE */
-    border: 5px solid #ff6600;
-    /* BRIGHT ORANGE BORDER */
+    width: 200px;
+    height: 200px;
+    background: rgba(204, 255, 0, 0.08);
+    /* See-through green tint */
+    border: 1px solid rgba(204, 255, 0, 0.4);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
-    color: #ffffff;
+    font-size: 1.5rem;
+    color: var(--accent-green);
     font-weight: bold;
-    box-shadow: 0 0 60px rgba(255, 128, 0, 0.8);
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.15);
 }
 
 .front {
-    transform: rotateY(0deg) translateZ(250px);
+    transform: rotateY(0deg) translateZ(100px);
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(250px);
+    transform: rotateY(180deg) translateZ(100px);
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(250px);
+    transform: rotateY(90deg) translateZ(100px);
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(250px);
+    transform: rotateY(-90deg) translateZ(100px);
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(250px);
+    transform: rotateX(90deg) translateZ(100px);
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(250px);
+    transform: rotateX(-90deg) translateZ(100px);
 }
 
 
