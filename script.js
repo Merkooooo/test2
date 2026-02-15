@@ -94,6 +94,29 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(section);
     });
 
+    // --- Mobile Menu Toggle ---
+    const mobileToggle = document.getElementById('mobileToggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    mobileToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Close sidebar when clicking links on mobile
+    document.querySelectorAll('.nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 1024) {
+                sidebar.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    });
+
 });
 
 // --- Glitch Text Effect (Random characters on hover) ---
