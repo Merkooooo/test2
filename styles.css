@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg-black: #050505;
     --bg-dark: #0a0a0a;
     --accent-green: #CCFF00;
@@ -217,7 +217,7 @@ img {
 }
 
 .highlight::before {
-    content: 'INŽENIRING';
+    content: 'INĹ˝ENIRING';
     position: absolute;
     top: 0;
     left: 0;
@@ -899,5 +899,82 @@ img {
     .project-reveal-img {
         display: none;
         /* Hide hover effect on mobile */
+    }
+}
+
+/* --- MOBILE REFINEMENT --- */
+@media (max-width: 1024px) {
+    .mobile-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2000;
+        background: var(--accent-green);
+        color: var(--bg-black);
+        width: 45px;
+        height: 45px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    .sidebar {
+        position: fixed !important;
+        top: 0;
+        left: -300px !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: #050505 !important;
+        z-index: 1500 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: 80px !important;
+        transition: transform 0.4s ease !important;
+        border-right: 1px solid var(--border-color) !important;
+    }
+
+    .sidebar.active {
+        transform: translateX(300px) !important;
+    }
+
+    .nav-links,
+    .socials {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 0 40px !important;
+    }
+
+    .content-wrapper {
+        margin-left: 0 !important;
+    }
+
+    .hero-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-top: 100px !important;
+    }
+
+    .hero-title {
+        font-size: 2.8rem !important;
+    }
+
+    .hero-graphic {
+        margin-top: 40px !important;
+        transform: scale(0.6) !important;
+    }
+
+    .bento-grid,
+    .contact-wrapper {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Fix the specific 'CYBER' bar issue if it was a rotated footer or similar */
+    .status-bar {
+        display: none !important;
     }
 }
